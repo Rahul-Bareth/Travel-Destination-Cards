@@ -14,6 +14,7 @@ body{
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 
@@ -41,6 +42,8 @@ body{
 
   cursor: pointer;
   transition: 0.3s ease;
+
+  flex-shrink: 0;
 }
 
 .card:hover {
@@ -81,10 +84,12 @@ body{
 
 .button {
   display: flex;
+  flex-direction: column;
   justify-content: end;
   align-items: center;
   margin-right: 10px;
   margin-bottom: 0px;
+  
 }
 
 .book-btn{
@@ -101,4 +106,16 @@ body{
 .book-btn:hover {
   background-color: rgb(235, 158, 43);
   transition: 0.3s;
+}
+
+@media (max-width: 728px) {
+  body { 
+   padding: 20px;
+  }
+ .heading,
+ .about {
+  margin-left: 0;
+  text-align: center;
+ }
+
 }
